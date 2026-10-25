@@ -26,7 +26,7 @@ while True:
         print("                             ")
         print("=============================")
     elif usropc == "ajuda":
-        print("================== Atvidades Feitas ==================")
+        print("================== Atividades Feitas ==================")
         print("                                                      ")
         print("1. Hello, World! (digite 'hello world' para verificar)")
         print("2. Saudação (digite 'saudacao' para verificar)")
@@ -39,11 +39,17 @@ while True:
         print("9. Média de Notas (digite 'media de notas' para verificar)")
         print("10. Digite suas informações (digite 'informacao' para verificar)")
         print("11. Imprimir a soma de dois números (digite 'imprimir a soma de dois numeros' para verificar)")
-        print("12. Converter Metro para Milímetro (digite 'converter metro para mil")
+        print("12. Converter Metro para Milímetro (digite 'converter metro para milimetro' para verificar)")
         print("13. Converter Hora para Minuto (digite 'converter hora para minuto' para verificar)")
         print("14. Converter Dias, Horas, Minutos e Segundos (digite 'converter dias horas minutos e segundos para segundos' para verificar)")
         print("15. Percentual (digite 'percentual' para verificar)")
-        print("16. Sair (digte 'sair' para encerrar o programa)")
+        print("16. Tempo de Viagem (digite 'tempo de viagem' para verificar)")
+        print("17. Conversor de Temperatura 2 (digite 'conversor de temperatura 2' para verificar)")
+        print("18. Calculador de Gorjeta (digite 'calculador de gorjeta' para verificar)")
+        print("19. Redução de Vida de um Fumante (digite 'redução de vida de um fumante' para verificar)")
+        print("20. Valor Aleatório (digite 'valor aleatório' para verificar)")
+        print("21. Digite Quatro Números Inteiros e Veja o Resultado (digite 'digite quatro números inteiros e veja o resultado' para verificar)")
+        print("22. Sair (digite 'sair' para encerrar o programa)")
         print("                                                      ")
         print("======================================================")
     elif usropc == "calculadora":
@@ -119,7 +125,8 @@ while True:
         num1medno = float(input("Digite a primeira nota >>> "))
         num2medno = float(input("Digite a segunda nota >>> "))
         num3medno = float(input("Digite a terceira nota >>> "))
-        medno = (num1medno + num2medno + num3medno) / 3
+        num4medno = float(input("Digite a terceira nota >>>"))
+        medno = (num1medno + num2medno + num3medno + num4medno) / 4
         print(f"A média das notas é: {medno}")
         print("                                  ")
         print("==================================")
@@ -166,11 +173,9 @@ while True:
         hcdhmesps = int(input("Digite o valor em horas >>> "))
         mcdhmesps = int(input("Digite o valor em minutos >>> "))
         scdmesps = int(input("Digite o valor em segundos >>> "))
-        horas += dcdhmesps * 24
-        minutos += horas * 60
-        segundos += minutos * 60
+        total_segundos = (dcdhmesps * 24 * 60 * 60) + (hcdhmesps * 60 * 60) + (mcdhmesps * 60) + scdmesps
         print("                                                   ")
-        print(f"{dcdhmesps} dias, {hcdhmesps} horas, {mcdhmesps} minutos e {scdmesps} segundos é igual a {segundos} segundos.")
+        print(f"{dcdhmesps} dias, {hcdhmesps} horas, {mcdhmesps} minutos e {scdmesps} segundos é igual a {total_segundos} segundos.")
         print("                                                   ")
         print("===================================================")
 
@@ -182,7 +187,62 @@ while True:
         print(f"{prctlprctl}% de {ttprctl} é {((prctlprctl / 100) * ttprctl)}.")
         print(f"logo, o total a ser pago é {ttprctl - ((prctlprctl / 100) * ttprctl)}")
         print("                                                   ")
-        print("===================================================")
+        print("=============================")
+    elif usropc == "tempo de viagem":
+        print("========= Tempo de Viagem =========")
+        print("                                                   ")
+        dsttvi = float(input("Digite a distância em km >>> "))
+        vlotvi = float(input("Digite a velocidade média em km/h >>> "))
+        tmpotvi = dsttvi / vlotvi
+        print(f"O tempo de viagem é de {tmpotvi} horas.")
+        print("                                                   ")
+        print("==================================")
+    elif usropc == "conversor de temperatura 2":
+        print("========= Conversor de Temperatura 2 =========")
+        print("                                                   ")
+        fdtF2 = float(input("Digite a temperatura em Fahrenheit >>> "))
+        cdtC2 = (fdtF2 - 32) * 5/9
+        print(f"{fdtF2}°F é equivalente a {cdtC2}°C")
+        print("                                                   ")
+        print("=============================================")
+    elif usropc == "calculador de gorjeta":
+        print("========= Calculador de Gorjeta =========")
+        print("                                                   ")
+        vlprpl = float(input("Digite o valor da conta >>> "))
+        pctlgor = float(input("Digite o percentual da gorjeta >>> "))
+        print(f"A gorjeta é de {((pctlgor / 100) * vlprpl)}.")
+        print(f"O total a ser pago é {vlprpl + ((pctlgor / 100) * vlprpl)}.")
+        print("                                                   ")
+        print("=========================================")
+    elif usropc == "redução de vida de um fumante":
+        print("========= Redução de Vida de um Fumante =========")
+        print("                                                   ")
+        qntcigfum = int(input("Digite a quantidade de cigarros fumados por dia >>> "))
+        agefum = int(input("Digite o número de anos que a pessoa fumou >>> "))
+        rdvda = (qntcigfum * agefum * 365) * 10
+        print(f"A redução de vida é de {rdvda} minutos.")
+        print(f"Isso equivale a {rdvda / 60} horas ou {rdvda / 60 / 24} dias.")
+        print("                                                   ")
+        print("=================================================")
+    elif usropc == "valor aleatório":
+        print("========= Valor Aleatório =========")
+        print("                                                   ")
+        Ava = int(input("Digite o primeiro valor inteiro >>> "))
+        Bva = int(input("Digite o segundo valor inteiro >>> "))
+        tpva = Ava
+        Ava = Bva
+        Bva = tpva
+        print(f"A contém {Ava} e B contém {Bva}.")
+        print("                                                   ")
+        print("===================================")
+    elif usropc == "digite quatro números inteiros e veja o resultado":
+        print("======= digite quatro números inteiros e veja o resultado=======")
+        print("")
+        n1dqnievior = int(input("Digite o prímeiro número >>> "))
+        n2dqnievior = int(input("Digite o segundo número >>>"))
+        n3dqnievior = int(input("Digite o terceiro número >>>"))
+        n4dqnievior = int(input("Digite o quarto número >>>"))
+        print(f"({n1dqnievior} + {n2dqnievior} + {n3dqnievior} x {n4dqnievior} = {(n1dqnievior + n2dqnievior + n3dqnievior) * n4dqnievior})")
     elif usropc == "sair":
         print("Saindo do programa ...")
         break
