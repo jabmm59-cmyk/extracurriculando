@@ -6,29 +6,34 @@ while True:
         print("Digite 'sair' para encerrar o programa.")
         print("Digite 'questão 1' para verificar se você pode entrar na festa.")
         print("Digite 'questão 2' para verificar se você pode entrar na festa teen.")
+        print("Digite 'questão 3' para verificar se você pode entrar no camarim.")
+        print("Digite 'questão 4' para verificar se você pode jogar.")
+        print("Digite 'questão 5' para verificar o preço do celular.")
+        print("Digite 'questão 6' para conversar com o mini simulador de conversa.")
+        print("Digite 'questão 7' para verificar se você é um Gamer de verdade.")   
         print("Digite 'ajuda' para ver esta mensagem novamente.")
     elif usr == "questão 1":
         while True:
             print("==== Você pode entrar na festa? ====")
-            agq1 = float(input("Digite a sua idade >>> "))
             try:
-                agvr = float(agq1)
-                if agvr >= 14:
-                    print("Você pode entrar na festa!")
-                    break
-                else:
-                    print("Você não pode entrar na festa!")
-                    break
+                agq1 = float(input("Digite a sua idade >>> "))
+                agvr = int(agq1)
             except ValueError:
                 print("Por favor, digite um número válido para a idade.")
                 continue
+            if agq1 >= 14:
+                print("Você pode entrar na festa!")
+                break
+            else:
+                print("Você não pode entrar na festa!")
+                break
     elif usr == "questão 2":
         while True:
             print("==== Verificação de idade para festa teen? ====")
-            agq2 = float(input("Digite a sua idade >>> "))
             try:
-                agvr = float(agq2)
-                if agvr >= 14 and agvr <= 17:
+                agq2 = float(input("Digite a sua idade >>> "))
+                agvr = int(agq2)
+                if agq2 >= 14 and agq2 <= 17:
                     print("Você pode entrar na festa!")
                     break
                 else:
@@ -51,23 +56,23 @@ while True:
     elif usr == "questão 4":
         print("==== Verificação de Idade de Jogo ====")
         while True:
-            agq4 = float(input("Digite a sua idade >>> "))
             try:
-                agvr = float(agq4)
-                if agvr >= 15:
-                    print("Você pode jogar!")
-                    break
-                else:
-                    acomp = input("Você está acompanhado de um adulto? (s/n) >>> ")
-                    if acomp == "s":
-                        print("Você pode jogar!")
-                        break
-                    else:
-                        print("Você não pode jogar!")
-                        break
+                agq4 = float(input("Digite a sua idade >>> "))
+                agvr = int(agq4)
             except ValueError:
                 print("Por favor, digite um número válido para a idade.")
                 continue
+            if agvr >= 15:
+                print("Você pode jogar!")
+                break
+            else:
+                acomp = input("Você está acompanhado de um adulto? (s/n) >>> ")
+                if acomp == "s":
+                    print("Você pode jogar!")
+                    break
+                else:
+                    print("Você não pode jogar!")
+                    break
     elif usr == "questão 5":
         print("==== Comprando um Celular ====")
         while True:
@@ -80,11 +85,20 @@ while True:
                 break
             ver = input("Você irá pagar à vista ou parcelado? (digite 'vista' ou 'parcelado') >>> ")
             if ver == "vista":
-                print(f"Você pagará R${prc - 250} à vista.")
+                print(f"Você pagará R${prc} à vista.")
                 break
             elif ver == "parcelado":
-                pr = input("Digite o número de parcelas (2, 3 ou 4) >>> ")
-                print(f"Você pagará R${prc/int(pr)} por parcela.") #tinha esquecido de botar o int no {pr} então tive que improvisar
+                while True:
+                    pr = input("Digite o número de parcelas (2, 3 ou 4) >>> ")
+                    try:
+                        pr_int = int(pr)
+                        if pr_int in [2, 3, 4]:
+                            print(f"Você pagará R${prc/pr_int:.2f} por parcela.")
+                            break
+                        else:
+                            print("Por favor, digite 2, 3 ou 4 parcelas.")
+                    except ValueError:
+                        print("Por favor, digite um número válido.")
                 break
     elif usr == "questão 6":
         while True:
