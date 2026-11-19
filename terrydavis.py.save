@@ -1,0 +1,11 @@
+def q1():
+	print("==== Questão 1 ====")
+	while True:
+		try:
+			
+	
+while True:
+	usrin = input(">>> ")
+	if usrin == "sair":
+		break
+
