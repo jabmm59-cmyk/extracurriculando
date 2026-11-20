@@ -125,9 +125,16 @@ def q9():
     shw(f"Menor: {meq9}")
 
 def q10():
-    shw("========================================")
-    shw("          TERRY DAVIS RPG BATTLE")
-    shw("========================================")
+    tit = r"""
+     @@@@@ @@@@@ @@@@  @@@@  @   @    @@@@   @@@  @   @ @@@  @@@@    @@@@  @@@@   @@@     @@@@   @@@  @@@@@ @@@@@ @     @@@@@ 
+       @   @     @   @ @   @  @ @     @   @ @   @ @   @  @  @        @   @ @   @ @        @   @ @   @   @     @   @     @     
+       @   @@@@  @@@@  @@@@    @      @   @ @@@@@ @   @  @   @@@     @@@@  @@@@  @  @@    @@@@  @@@@@   @     @   @     @@@@  
+       @   @     @  @  @  @    @      @   @ @   @  @ @   @      @    @  @  @     @   @    @   @ @   @   @     @   @     @     
+       @   @@@@@ @   @ @   @   @      @@@@  @   @   @   @@@ @@@@     @   @ @      @@@     @@@@  @   @   @     @   @@@@@ @@@@@ 
+    """
+    shw("=====================================================================================================================")
+    shw(tit)
+    shw("=====================================================================================================================")
 
     vq10 = 100
     vtdq10 = 200
@@ -228,7 +235,7 @@ def q10():
                 continue
 
         elif actn == "3":
-            print(terrydavis)
+            shw(terrydavis)
             shw(f"Terry Davis possui {vtdq10} HP.")
             continue
 
@@ -263,31 +270,48 @@ def q10():
 
     shw("========================================")
 
-
+def help():
+    shw("\n========== AIVIDADES AULA 7 ==========")
+    shw("questão 1  - Mostrar números ímpares até n")
+    shw("questão 2  - Mostrar números pares até n")
+    shw("questão 3  - Mostrar ímpares entre n1 e n2")
+    shw("questão 4  - Desenhar quadrado de asteriscos")
+    shw("questão 5  - Mostrar divisíveis por n3 no intervalo")
+    shw("questão 6  - Imprimir o alfabeto minúsculo")
+    shw("questão 7  - Contar positivos, negativos e zeros")
+    shw("questão 8  - Calcular potência com while")
+    shw("questão 9  - Encontrar maior e menor de cinco números")
+    pshw("questão 10 - Surpresa...")
+    shaw("sair - Encerrar o programa")
 shw("Digite help para listar todas as atividades feitas")
 while True:
     usrin = utype("live@user-P:/> ")
     if usrin == "sair":
         break
-    elif usrin == "questão 1":
+    elif usrin == "help":
+        help()
+        shw()
+    elif usrin in {"1", "questão 1", "questao 1"}:
         q1()
-    elif usrin == "questão 2":
+    elif usrin in {"2", "questão 2", "questao 2"}:
         q2()
-    elif usrin == "questão 3":
+    elif usrin in {"3", "questão 3", "questao 3"}:
         q3()
-    elif usrin == "questão 4":
+    elif usrin in {"4", "questão 4", "questao 4"}:
         q4()
-    elif usrin == "questão 5":
+    elif usrin in {"5", "questão 5", "questao 5"}:
         q5()
-    elif usrin == "questão 6":
+    elif usrin in {"6", "questão 6", "questao 6"}:
         q6()
-    elif usrin == "questão 7":
+    elif usrin in {"7", "questão 7", "questao 7"}:
         q7()
-    elif usrin == "questão 8":
+    elif usrin in {"8", "questão 8", "questao 8"}:
         q8()
-    elif usrin == "questão 9":
+    elif usrin in {"9", "questão 9", "questao 9"}:
         q9()
-    elif usrin == "questão 10":
+    elif usrin in {"10", "questão 10", "questao 10"}:
         q10()
     else:
-        print("Atividade ainda não feita ou inexistente")
+        shw("As atividades existentes são:")
+        help()
+        shw()
