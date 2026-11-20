@@ -123,7 +123,6 @@ def q9():
         ctq9 += 1
     shw(f"Maior: {maq9}")
     shw(f"Menor: {meq9}")
-
 def q10():
     tit = r"""
      @@@@@ @@@@@ @@@@  @@@@  @   @    @@@@   @@@  @   @ @@@  @@@@    @@@@  @@@@   @@@     @@@@   @@@  @@@@@ @@@@@ @     @@@@@ 
@@ -269,7 +268,6 @@ def q10():
         shw("TERRY DAVIS VENCEU!")
 
     shw("========================================")
-
 def help():
     shw("\n========== AIVIDADES AULA 7 ==========")
     shw("questão 1  - Mostrar números ímpares até n")
@@ -281,8 +279,8 @@ def help():
     shw("questão 7  - Contar positivos, negativos e zeros")
     shw("questão 8  - Calcular potência com while")
     shw("questão 9  - Encontrar maior e menor de cinco números")
-    pshw("questão 10 - Surpresa...")
-    shaw("sair - Encerrar o programa")
+    shw("questão 10 - Surpresa...")
+    shw("sair - Encerrar o programa")
 shw("Digite help para listar todas as atividades feitas")
 while True:
     usrin = utype("live@user-P:/> ")
